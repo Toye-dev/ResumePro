@@ -1,9 +1,9 @@
 {
-  "name": "resumepro",
+  "name": "ResumePro",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Toye-dev.github.io/resumepro",
+  "homepage": "https://Toye-dev.github.io/ResumePro",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
