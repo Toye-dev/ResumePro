@@ -7,9 +7,12 @@
   overflow-x: hidden;
 }
 
-html { 
+html, body { 
   font-size: 100%; 
+  min-height: 100vh; 
+  height: auto;
 }
+
 
 /* header section for the app-logo and the print button*/
 
@@ -129,7 +132,6 @@ main {
   justify-content: flex-end;
   margin-right: 40px;
   margin-top: 15px;
-  
 }
 
 .indicator {
@@ -142,8 +144,8 @@ main {
 }
 
 .active {
-  background-color: whitesmoke;#6672af;
-  border: 1px solid #6a6f8a; rgb(105, 101, 101);
+  background-color: whitesmoke;
+  border: 1px solid #6a6f8a;
   transition: background-color 700ms ease, border 3000ms ease;
   width: 6px;
   height: 7px;
@@ -238,8 +240,8 @@ textarea {
 }
 
 .add-button {
-padding-top: 10px;
-margin-bottom: -20px;
+  padding-top: 10px;
+  margin-bottom: -20px;
 }
 
 .delete-button {
@@ -302,6 +304,7 @@ margin-bottom: -20px;
 
 .back-button, .next-button {
   border: none;
+  width: 21px;
   background-color: #3d424000;
   padding: 5px 0px;
   cursor: pointer;
@@ -315,10 +318,6 @@ margin-bottom: -20px;
 .back-button {
   align-items: flex-end;
   padding-right: 0px;
-}
-
-.next-button {
-  margin-left: px;
 }
 
 .button-icon {
@@ -365,9 +364,7 @@ margin-bottom: -20px;
   left: 558px;
 }
 
-
 /* output section */
-
 
 .a4-sheet {
   width: 210mm;
@@ -377,6 +374,7 @@ margin-bottom: -20px;
   margin: 20px;
   margin-top: 30px;
   margin-left: 205px;
+  margin-bottom: 30px;
   box-shadow: -2px 8px 9px 4px rgba(114, 113, 113, 0.2);
 }
 
@@ -386,7 +384,7 @@ margin-bottom: -20px;
   justify-content: center;
   width: 210mm;
   height: 140px;
-  background-color: #6b6f83; #3b4b61; #3d4240;  #6a6e6b ;
+  background-color: #6b6f83;
   text-align: center;
   color: rgb(241, 241, 237);
   font-family: 'Lato'; 
@@ -467,6 +465,10 @@ margin-bottom: -20px;
   margin-top: -4px;
 }
 
+.achievements {
+  max-width: 505px;
+}
+
 .subHeader {
   font-size: 1.2rem;
   font-weight: 600;
@@ -540,6 +542,252 @@ margin-bottom: -20px;
 
 .projectAndAchiv, .institAndCourse {
   margin-bottom: 10px;
+}
+
+@media (max-width: 480px) {
+
+  /* header section for the app-logo and the print button*/
+
+  header {
+    height: 40px;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center;
+  }
+
+  .print-button {
+    height: 19px;
+    width: 25px;
+    margin-right: 5px;
+    margin-top: -3px;
+  }
+  
+  .print-icon {
+    margin-left: 1px;
+  }
+  
+  .print-top {
+    width: 11px;
+    height:2px;
+  }
+  
+  .print-middle {
+    width: 14px;
+    height:4px;
+  }
+  
+  .print-bottom {
+    width: 7px;
+    height: 1px;
+  }
+
+  .logo-first-half {
+    font-size: 15.6px; 
+  }
+  
+  .logo-second-half {
+    font-size: 16.8px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  /* input Section*/
+
+  .input-section {
+    padding-left: -10px;
+    padding-right: -16px;
+    max-width: 600px;
+    margin: 20px;
+    margin-left: 13px;
+    margin-right: 40px;
+  }
+
+  .indicator {
+    margin-left: 4px;
+  }
+
+  .step-indicator {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: -5px;
+    margin-top: 35px;
+  }
+
+  .input-section h1 {
+    font-size: 1.2rem;
+    margin-left: 0px;
+    margin-top: 16px;
+    margin-bottom: 19px;
+    max-width: 374px;
+  }
+  .input-section p {
+    max-width: 274px;
+  }
+
+  .print-button p {
+    display: none;
+  }
+
+  p {
+    font-size: .9rem;
+    margin-top: -15px;
+    margin-left: 0px;
+  }
+
+  .form-card {
+    width: 90%;
+    max-width: 370px;
+    min-width: 235px;
+    padding: 25px 25px 55px 19px;
+    position: relative;
+  }
+
+  label {
+    font-size: .85rem;
+  }
+
+  .text-input {
+    width: 100%;
+    padding-bottom: 2px;
+    font-size: .9rem;
+  }
+
+  .button-text {
+    margin-top: 8px;
+    font-size: .9rem;
+  }
+
+  .add-button, .delete-button {
+    margin-left: 218px;
+    position: absolute;
+    right: 15px;
+  }
+
+  .addIcon {
+    font-size: 1.1rem;
+  }
+  
+  .delIcon {
+    font-size: .8rem;
+  }
+  
+  .addText, .delText {
+    font-size: .8rem;
+  }
+
+  .vertical-line {
+    display: none;
+  }
+
+  .direction-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 23px;
+    gap: 2px;
+    padding-left: 0px;
+    margin-right: -10px;
+  }
+
+  .button-icon {
+    height: 14px;
+    width: 7px;
+    padding-top: 0px;
+  }
+
+  .dividing-line {
+    margin-top: 33px;
+  }
+
+  /* output section */
+
+  /*.a4-sheet {
+    width: 90%;
+    min-width: 110vw;/*min-width: 284px;*/
+    /*height: 297mm;
+    margin-top: 30px;
+    margin-left: -10px;
+  }
+
+  .sheet-header-div {
+    width: 100%;
+    height: 100px;
+    font-family: 'Lato'; 
+  }
+  */
+    
+  .a4-sheet {
+    margin: auto;
+    margin-top: 20px;
+    width: 210mm;
+    height: 297mm;
+    transform: scale(0.48); 
+    transform-origin: top left;
+  }
+
+  .to {
+    margin-left: 25px;
+  }
+
+  .achievements {
+    max-width: 490px;
+  }
+  
+  .complocat .dividing-Line {
+    margin-left: -19px;
+    margin-right: 2px;
+  }
+
+  .location > .dividing-Line {
+    margin-left: 6px;
+  }
+  
+  .location {
+    padding-top: 1px;
+    margin-bottom: 14px;
+  }
+
+}
+
+@media (max-width: 430px) {
+  .a4-sheet {
+    transform: scale(0.514);
+  }
+}
+
+@media (max-width: 414px) {
+  .a4-sheet {
+    transform: scale(0.499);
+  }
+}
+
+@media (max-width: 390px) {
+  .a4-sheet {
+    transform: scale(0.47);
+  }
+}
+
+@media (max-width: 376px) {
+  .a4-sheet {
+    transform: scale(0.45);
+  }
+}
+
+@media (max-width: 360px) {
+  .a4-sheet {
+    transform: scale(0.43);
+  }
+}
+
+@media (max-width: 320px) {
+  .a4-sheet {
+    transform: scale(0.38);
+  }
 }
 
 
